@@ -1,39 +1,24 @@
-# Python
-__pycache__/
-*.py[cod]
-*$py.class
-*.so
-.Python
-env/
-build/
-develop-eggs/
-dist/
-downloads/
-eggs/
-.eggs/
-lib/
-lib64/
-parts/
-sdist/
-var/
-*.egg-info/
-.installed.cfg
-*.egg
-.venv/
-venv/
-
-# Django
+#Files to ignore when pushing a PyCharm Django project to
+github:
+#files only needed by a PyCharm project and local-only django
+files
+.idea/
+local_settings.py
+#the virtual environment name - use the name of your virtual
+environment
+#if different from venv
+venv
+### Django ###
 *.log
+*.pot
+*.pyc
+__pycache__/
 local_settings.py
 db.sqlite3
-db.sqlite3-journal
 media
-
-# PyCharm
-.idea/
-*.iml
-*.iws
-*.ipr
-
-# Mac
-.DS_Store
+# Ignore Django Migrations in Development if you are working on
+team
+# Only for Development only
+**/migrations/**
+# !**/migrations
+!**/migrations/__init__.py

@@ -26,7 +26,9 @@ SECRET_KEY = 'django-insecure-w0yqybcqzn%@8survqg-pim6+nrbkt16#9^_)$k2c#d*e1_=0q
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    ['127.0.0.1', '.pythonanywhere.com']
+]
 
 
 # Application definition
@@ -77,8 +79,6 @@ TEMPLATES = [
 WSGI_APPLICATION = 'investments_be.wsgi.application'
 
 
-# Database
-# https://docs.djangoproject.com/en/5.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
@@ -88,8 +88,6 @@ DATABASES = {
 }
 
 
-# Password validation
-# https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
 
 AUTH_PASSWORD_VALIDATORS = [
     {
@@ -107,9 +105,6 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 
-# Internationalization
-# https://docs.djangoproject.com/en/5.2/topics/i18n/
-
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'UTC'
@@ -119,13 +114,9 @@ USE_I18N = True
 USE_TZ = True
 
 
-# Static files (CSS, JavaScript, Images)
-# https://docs.djangoproject.com/en/5.2/howto/static-files/
 
 STATIC_URL = 'static/'
 
-# Default primary key field type
-# https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
@@ -145,14 +136,11 @@ SIMPLE_JWT = {
     'ACCESS_TOKEN_LIFETIME': timedelta(minutes=10),
 }
 
-# Modern CORS settings (replacing deprecated CORS_ORIGIN_WHITELIST)
 CORS_ALLOWED_ORIGINS = [
     "http://localhost:8080",
     "http://127.0.0.1:8080",
-    "https://your-vercel-app.vercel.app",  # Replace with your actual Vercel domain
 ]
 
-# Allow all origins temporarily for development
 CORS_ALLOW_ALL_ORIGINS = True
 
 import os
